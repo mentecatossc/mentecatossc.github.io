@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentecatos · Comparsa Santa Cruz</title>
+    <meta name="description" content="Integrantes de la comparsa Mentecatos - Carnaval de Santa Cruz de la Sierra.">
+    <link rel="icon" href="images/logo.jpg">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mentecatossc.github.io/">
+    <meta property="og:title" content="Mentecatos · Comparsa Santa Cruz">
+    <meta property="og:description" content="Integrantes de la comparsa Mentecatos - Carnaval de Santa Cruz de la Sierra.">
+    <meta property="og:image" content="https://mentecatossc.github.io/images/logo.jpg">
+    <meta property="og:image:width" content="960">
+    <meta property="og:image:height" content="960">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mentecatos · Comparsa Santa Cruz">
+    <meta name="twitter:description" content="Integrantes de la comparsa Mentecatos - Carnaval de Santa Cruz de la Sierra.">
+    <meta name="twitter:image" content="https://mentecatossc.github.io/images/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#">
+                <img class="brand-logo" src="images/logo.jpg" alt="Logo comparsa Mentecatos">
+                <span class="brand-name">Mentecatos</span>
+            </a>
+            <nav class="site-nav" aria-label="Secciones">
+                <a href="index.html" class="active" aria-current="page">Integrantes</a>
+                <a href="turnos/index.html">Turnos</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-bg" style="background-image:url('images/logo.jpg')" aria-hidden="true"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">Mentecatos</h1>
+            <p class="hero-tagline">Comparsa &middot; Carnaval de Santa Cruz de la Sierra</p>
+        </div>
+        <svg class="hero-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0,40 C240,80 480,0 720,20 C960,40 1200,90 1440,30 L1440,80 L0,80 Z"></path>
+        </svg>
+    </section>
+
+    <main class="container">
+        <section id="integrantes" class="members-section">
+            <div class="section-header">
+                <h2>Integrantes</h2>
+                <div class="search-box">
+                    <input type="search" id="search-input" placeholder="Buscar por alias o nombre..." aria-label="Buscar integrante">
+                </div>
+            </div>
+
+            <p id="status-msg" class="status-msg">Cargando integrantes...</p>
+            <p id="empty-msg" class="status-msg" hidden>No se encontraron integrantes con ese criterio.</p>
+
+            <div id="members-grid" class="members-grid" hidden></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <img class="footer-logo" src="images/logo.jpg" alt="Mentecatos">
+            <p>&copy; <span id="year"></span> Mentecatos &middot; Santa Cruz de la Sierra</p>
+        </div>
+    </footer>
+
+    <script src="shared.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
