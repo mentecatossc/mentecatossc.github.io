@@ -19,6 +19,13 @@
     box-sizing: border-box;
 }
 
+/* Elements toggled via el.hidden = true also set their own `display`
+   (grid/flex/etc.), which otherwise overrides the browser's default
+   [hidden] rule and keeps them visible. */
+[hidden] {
+    display: none !important;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -459,5 +466,81 @@ img.member-photo.is-loaded {
 
     .search-box input {
         width: 100%;
+    }
+}
+
+/* Eventos */
+.calendar-card {
+    background: linear-gradient(160deg, var(--card-bg), var(--blue-700));
+    border: 1px solid rgba(168, 201, 60, 0.25);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 12px;
+}
+
+.calendar-frame {
+    position: relative;
+}
+
+.calendar-card iframe {
+    display: block;
+    width: 100%;
+    height: 650px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.calendar-spinner {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    background: var(--card-bg);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.calendar-spinner p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.spinner-ring {
+    width: 44px;
+    height: 44px;
+    border: 4px solid rgba(246, 213, 0, 0.25);
+    border-top-color: var(--yellow);
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.calendar-link {
+    text-align: center;
+    margin-top: 18px;
+}
+
+.calendar-link a {
+    color: var(--green);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.calendar-link a:hover {
+    color: var(--yellow);
+}
+
+@media (max-width: 600px) {
+    .calendar-card iframe {
+        height: 520px;
     }
 }

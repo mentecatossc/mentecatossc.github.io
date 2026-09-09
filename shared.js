@@ -156,3 +156,12 @@ var Mentecatos = (function () {
         fetchMembers: fetchMembers
     };
 })();
+
+// Every page has a footer with #year - set it here once instead of in each page's script.
+(function () {
+    "use strict";
+    var yearEl = document.getElementById("year");
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
+})();

@@ -5,13 +5,8 @@
     var emptyMsg = document.getElementById("empty-msg");
     var grid = document.getElementById("members-grid");
     var searchInput = document.getElementById("search-input");
-    var yearEl = document.getElementById("year");
 
     var allMembers = [];
-
-    if (yearEl) {
-        yearEl.textContent = new Date().getFullYear();
-    }
 
     function createCard(member) {
         var card = document.createElement("article");

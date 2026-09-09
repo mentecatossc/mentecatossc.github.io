@@ -6,11 +6,6 @@
     var statusMsg = document.getElementById("turnos-status");
     var groupsEl = document.getElementById("turnos-groups");
 
-    var yearEl = document.getElementById("year");
-    if (yearEl) {
-        yearEl.textContent = new Date().getFullYear();
-    }
-
     function buildMembersMap(members) {
         var map = {};
         members.forEach(function (m) {
